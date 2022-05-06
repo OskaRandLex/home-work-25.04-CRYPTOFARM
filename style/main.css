@@ -24,6 +24,8 @@ p {
     min-height: 48px;
     padding-bottom: 21px;
     flex-wrap: wrap;
+    padding-right: 38px;
+    justify-content: space-between;
 }
 
 .header-btn {
@@ -44,8 +46,14 @@ p {
     margin-top: 20px;
 }
 
+.left-header-btns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .help-btn {
-    margin-right: 112px;
+    margin-right: 86px;
 }
 
 .header-btn img {
@@ -97,8 +105,12 @@ p {
 .farm-left-info {
     display: flex;
     align-items: center;
-    padding-top: 30px;
     flex-wrap: wrap;
+    width: 1026px;
+}
+
+.farm-left-info-1, .farm-left-info-2, .farm-left-info-3, .farm-left-info-4 {
+    padding-top: 30px;
 }
 
 .farm-left-info-1 {
@@ -174,7 +186,8 @@ p {
 .balance .balance-and-buy:nth-child(1),
 .balance .balance-and-buy:nth-child(2),
 .balance .balance-and-buy:nth-child(3),
-.balance .balance-and-buy:nth-child(5) {
+.balance .balance-and-buy:nth-child(5),
+.balance .balance-and-buy:nth-child(6) {
     margin-right: 25px;
 }
 
@@ -320,6 +333,10 @@ p {
 
 .btn-block span {
     font-weight: 400;
+}
+
+.five-blnc .right-balance {
+    margin-left: 37px;
 }
 
 .binance-buy-btn {
@@ -553,7 +570,7 @@ p {
 }
 
 .transaction {
-    min-width: 73%;
+    width: 908px;
     margin-top: 33px;
 }
 
@@ -797,5 +814,263 @@ p {
     }
     .header-container {
         padding-left: 40px;
+    }
+}
+
+@media screen and (max-width: 1290px) {
+    .container {
+        padding-left: 12%;
+    }
+    .account-info {
+        margin-left: 45%;
+    }
+    .help-btn {
+        margin-right: 0;
+    }
+    .left-header-btns {
+        width: 100%;
+    }
+    .big-chart-top {
+        width: 100%;
+    }
+    .right-big-chart {
+        width: 905px;
+    }
+    .contacts-transaction {
+        width: 905px;
+    }
+}
+
+@media screen and (max-width: 1119px) {
+    .container {
+        padding-left: 6%;
+    }
+    .left-header-btns {
+        padding-left: 11%;
+        width: 77%;
+    }
+    .left-header-btns .header-btn:nth-child(2) {
+        margin-right: 0;
+    }
+    .left-header-btns .header-btn:nth-child(1) {
+        margin-right: 118px;
+    }
+}
+
+@media screen and (max-width: 1047px) {
+    .balance-and-buy {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 838px) {
+    .header-btn {
+        font-size: 23px;
+    }
+    .account-info-text {
+        font-size: 24px;
+    }
+    .account-info-img img {
+        width: 50px;
+    }
+    .drpdwn {
+        width: 15px;
+    }
+    .account-info {
+        margin-left: 37%;
+    }
+    .farm-right-info-btn {
+        font-size: 17px;
+    }
+    .balance-and-buy {
+        width: 480px;
+        margin-left: 18%;
+    }
+    .balance-block {
+        height: 120px;
+    }
+    .sum-balance p:nth-child(1) {
+        font-size: 21px;
+        margin-bottom: 25px;
+    }
+    .sum-balance strong {
+        font-size: 27px;
+    }
+    .sum-balance span {
+        font-size: 18px;
+    }
+    .sum-balance p:nth-child(3) {
+        font-size: 20px;
+    }
+    .crypto-balance .sum-balance-elipse {
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+    .sum-balance .sum-balance-elipse {
+        margin-bottom: 25px;
+    }
+    .right-balance img:nth-child(1) {
+        width: 35px;
+    }
+    .crypto-balance {
+        font-size: 21px;
+    }
+    .sum-balance-elipse strong {
+        font-size: 27px;
+    }
+    .sum-balance-elipse span {
+        font-size: 18px;
+    }
+    .crypto-balance p {
+        font-size: 20px;
+    }
+    .btn-block {
+        height: 50px;
+    }
+    .btn-block p {
+        font-size: 19px;
+    }
+    .binance-buy-btn {
+        height: 50px;
+    }
+    .all-balance-block p {
+        font-size: 22px;
+    }
+    .total-balance {
+        justify-content: flex-start;
+    }
+    .total-balance img {
+        margin-right: 5px;
+    }
+    .total-balance span {
+        font-size: 18px;
+    }
+    .total-balance strong {
+        font-size: 25px;
+    }
+    .left-big-chart > p {
+        font-size: 22px;
+    }
+    .right-big-chart p {
+        font-size: 22px;
+    }
+    .big-chart-bottom p:not(:first-child) {
+        margin-top: 30px;
+    }
+    .big-chart-bottom {
+        padding-bottom: 10px;
+    }
+    .big-chart-bottom p {
+        padding-bottom: 10px;
+    }
+    .chart-right-block-text span {
+        font-size: 21px;
+    }
+    .big-chart-top {
+        margin-bottom: 17px;
+    }
+    .first-p {
+        font-size: 22px;
+    }
+    .transactions-buttons button {
+        font-size: 23px;
+    }
+    .tr-1 span {
+        font-size: 20px;
+    }
+    .tr-2 .green-p {
+        font-size: 16px;
+    }
+    .tr-2 strong, .tr-3 strong, .tr-4 strong {
+        font-size: 16px;
+        margin-right: 6px;
+    }
+    .tr-3 .red-p, .tr-4 .red-p {
+        font-size: 16px;
+    }
+    .first-p-contact {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    .left-contact-info p:nth-child(1) {
+        font-size: 19px;
+    }
+    .left-contact-info p:nth-child(2) {
+        font-size: 19px;
+    }
+    .right-contact-info p:nth-child(1) {
+        font-size: 19px;
+    }
+    .right-contact-info p:nth-child(2) {
+        font-size: 19px;
+    }
+    .show-more {
+        font-size: 21px;
+        width: 278px;
+        height: 55px;
+    }
+    .footer {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 833px) {
+    .farm-left-info {
+        width: 51%;
+    }
+    .farm-left-info-2, .farm-left-info-3, .farm-left-info-4 {
+        margin-right: 12px;
+    }
+    .left-header-btns .header-btn:nth-child(1) {
+        margin-right: 0;
+    }
+    .left-header-btns {
+        width: 90%;
+        padding-left: 6%;
+    }
+}
+
+@media screen and (max-width: 784px) {
+    .farm-left-info-1 {
+        margin-right: 42px;
+    }
+    .farm-left-info-2, .farm-left-info-3, .farm-left-info-4 {
+        margin-right: 15px;
+    }
+    .balance-and-buy {
+        margin-left: 13%;
+    }
+    .transaction {
+        max-width: 100%;
+    }
+    .transaction-info {
+        padding-left: 5px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .left-header-btns {
+        width: 100%;
+        padding-left: 0;
+    }
+    .tr-1 span {
+        font-size: 14px;
+    }
+    .tr-2 .green-p {
+        font-size: 14px;
+    }
+    .tr-2 strong, .tr-3 strong, .tr-4 strong {
+        margin-right: 9px;
+    }
+}
+
+@media screen and (max-width: 547px) {
+    .header-btn {
+        font-size: 19px;
+        width: 190px;
+        height: 40px;
+    }
+    .account-info {
+        margin-left: 30%;
     }
 }
