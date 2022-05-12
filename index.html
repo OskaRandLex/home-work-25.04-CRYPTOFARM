@@ -14,6 +14,7 @@
 <body>
     <header class="header">
         <div class="header-container">
+
             <div class="left-header-btns">
                 <a href="#" class="header-btn">
                     <img src="img/speed.png" alt="">
@@ -32,6 +33,19 @@
                     <span>ПОМОЩЬ</span>
                 </a>
             </div>
+
+            <div class="top-nav">
+                <input id="menu-toggle" type="checkbox"/>
+                <label class='menu-button-container' for="menu-toggle">
+                    <div class='menu-button'></div>
+                </label>
+                <ul class="menu">
+                    <li>МОЯ ФЕРМА</li>
+                    <li>АККАУНТ</li>
+                    <li>НАСТРОЙКИ</li>
+                    <li>ПОМОЩЬ</li>
+                </ul>
+            </div>
             <div class="account-info">
                 <a href="#" class="account-info-img">
                     <img src="img/avatar.png" alt="">
@@ -45,9 +59,10 @@
     </header>
     <div class="container">
         <div class="my-farm">
+
             <div class="farm-left-info">
                 <div class="farm-left-info-1">
-                    <p>МОЯ ФЕРМА    </p>
+                    <p>МОЯ ФЕРМА</p>
                 </div>
                 <div class="farm-left-info-2">
                     <img src="img/litecoin.svg" alt="Litecoin">
@@ -71,11 +86,43 @@
                     </p>
                 </div>
             </div>
+            <div class="farm-left-info-min">
+                <div class="farm-left-info-1">
+                    <p>МОЯ ФЕРМА</p>
+                    <a href="#" class="farm-menu-crypto">
+                        <img src="img/dropdown-btn.png" alt="" class="drpdwn">
+                    </a>
+                </div>
+            </div>
+
             <div class="farm-right-info">
                 <a href="#" class="header-btn farm-right-info-btn">
                     <img src="img/plus.svg" alt="">
                     <span>Добавить валюту</span>
                 </a>
+            </div>
+        </div>
+        <div class="farm-bottom-info">
+            <div class="farm-left-info-2">
+                <img src="img/litecoin.svg" alt="Litecoin">
+                <p class="max-text-farm">
+                    <span class="min-text-farm">LTC</span>
+                    $160,43
+                </p>
+            </div>
+            <div class="farm-left-info-3">
+                <img src="img/bitcoin.png" alt="Bitcoin">
+                <p class="max-text-farm">
+                    <span class="min-text-farm">BTC</span>
+                    $8 545,00
+                </p>
+            </div>
+            <div class="farm-left-info-4">
+                <img src="img/ethernum.png" alt="Ethernum">
+                <p class="max-text-farm">
+                    <span class="min-text-farm">ETH</span>
+                    $533,00
+                </p>
             </div>
         </div>
 
@@ -308,6 +355,7 @@
                     <button type="button">Contracts</button>
                 </div>
                 <div class="transaction-info">
+
                     <table class="transaction-table">
                         <tr class="tr-1">
                             <th>
@@ -370,6 +418,90 @@
                             </td>
                         </tr>
                     </table>
+
+                    <div class="table-list">
+                        <div class="item-1-name">
+                            <span>Тариф</span>
+                            <img src="img/play-button.png" alt="">
+                        </div>
+                        <p class="green-p"><strong>BTC Optimal</strong> Активен</p>
+                        <div class="item-1-date">
+                            <span>Дата</span>
+                            <img src="img/play-button.png" alt="">
+                        </div>
+                        <p>28.02.2018</p>
+                        <div class="item-1-time">
+                            <span>Время</span>
+                            <img src="img/play-button.png" alt="">
+                        </div>
+                        <p>03:13:26</p>
+                        <div class="item-1-sum">
+                            <span>Сумма</span>
+                            <img src="img/play-button.png" alt="">
+                        </div>
+                        <div class="item-1-last-div">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="5" viewBox="0 0 8 5" fill="none">
+                                <path d="M3.84314 0.0696774L0.033521 4.7471C-0.00667044 4.79661 -0.010861 4.86081 0.0217112 4.91371C0.0546644 4.96677 0.119428 5 0.190287 5L7.80952 5C7.88038 5 7.94533 4.96677 7.97828 4.91371C7.99276 4.89016 8 4.86435 8 4.83871C8 4.80661 7.98857 4.77468 7.96628 4.7471L4.15667 0.0696774C4.12105 0.0259676 4.06257 0 3.9999 0C3.93723 0 3.87876 0.0261292 3.84314 0.0696774Z" fill="#27AE60"/>
+                            </svg>
+                            <strong>0.250134 BTC</strong>
+                            <span>3 145 USD</span>
+                        </div>
+
+                        <div class="item-1-name">
+                            <span>Тариф</span>
+                            <img src="img/play-button.png" alt="">
+                        </div>
+                        <p class="red-p"><strong>BTC Optimal</strong> Заканчивается</p>
+                        <div class="item-1-date">
+                            <span>Дата</span>
+                            <img src="img/play-button.png" alt="">
+                        </div>
+                        <p>28.02.2018</p>
+                        <div class="item-1-time">
+                            <span>Время</span>
+                            <img src="img/play-button.png" alt="">
+                        </div>
+                        <p>03:13:26</p>
+                        <div class="item-1-sum">
+                            <span>Сумма</span>
+                            <img src="img/play-button.png" alt="">
+                        </div>
+                        <div class="item-1-last-div">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="5" viewBox="0 0 8 5" fill="none">
+                                <path d="M4.15686 4.93032L7.96648 0.252903C8.00667 0.203387 8.01086 0.139194 7.97829 0.0862903C7.94534 0.0332258 7.88057 0 7.80971 0L0.190481 0C0.119622 0 0.0546684 0.0332258 0.0217152 0.0862903C0.00723839 0.109839 0 0.135645 0 0.16129C0 0.193387 0.0114288 0.225323 0.0337152 0.252903L3.84333 4.93032C3.87895 4.97403 3.93743 5 4.0001 5C4.06277 5 4.12124 4.97387 4.15686 4.93032Z" fill="#EB5757"/>
+                            </svg>
+                            <strong>0.250134 BTC</strong>
+                            <span>3 145 USD</span>
+                        </div>
+
+                        <div class="item-1-name">
+                            <span>Тариф</span>
+                            <img src="img/play-button.png" alt="">
+                        </div>
+                        <p class="red-p"><strong>BTC Optimal</strong> Заканчивается</p>
+                        <div class="item-1-date">
+                            <span>Дата</span>
+                            <img src="img/play-button.png" alt="">
+                        </div>
+                        <p>28.02.2018</p>
+                        <div class="item-1-time">
+                            <span>Время</span>
+                            <img src="img/play-button.png" alt="">
+                        </div>
+                        <p>03:13:26</p>
+                        <div class="item-1-sum">
+                            <span>Сумма</span>
+                            <img src="img/play-button.png" alt="">
+                        </div>
+                        <div class="item-1-last-div">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="5" viewBox="0 0 8 5" fill="none">
+                                <path d="M4.15686 4.93032L7.96648 0.252903C8.00667 0.203387 8.01086 0.139194 7.97829 0.0862903C7.94534 0.0332258 7.88057 0 7.80971 0L0.190481 0C0.119622 0 0.0546684 0.0332258 0.0217152 0.0862903C0.00723839 0.109839 0 0.135645 0 0.16129C0 0.193387 0.0114288 0.225323 0.0337152 0.252903L3.84333 4.93032C3.87895 4.97403 3.93743 5 4.0001 5C4.06277 5 4.12124 4.97387 4.15686 4.93032Z" fill="#EB5757"/>
+                            </svg>
+                            <strong>0.250134 BTC</strong>
+                            <span>3 145 USD</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 

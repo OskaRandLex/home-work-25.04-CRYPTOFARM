@@ -24,7 +24,6 @@ p {
     min-height: 48px;
     padding-bottom: 21px;
     flex-wrap: wrap;
-    padding-right: 38px;
     justify-content: space-between;
 }
 
@@ -96,6 +95,81 @@ p {
     margin: 0 auto;
 }
 
+/* BURGER MENU START */
+
+.top-nav {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+  
+  .menu > li {
+    margin: 0 1rem;
+    overflow: hidden;
+}
+  
+  .menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+  
+  #menu-toggle {
+    display: none;
+}
+  
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    display: block;
+    background-color: #162970;
+    position: absolute;
+    height: 6px;
+    width: 50px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+  
+  .menu-button::before {
+    content: '';
+    margin-top: -13px;
+}
+  
+  .menu-button::after {
+    content: '';
+    margin-top: 13px;
+}
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+  
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
+/* BURGER MENU FINISH */
+
+
+
+
 .my-farm {
     display: flex;
     flex-wrap: wrap;
@@ -106,7 +180,16 @@ p {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    width: 1026px;
+    max-width: 1026px;
+}
+
+.farm-left-info-min {
+    display: none;
+    align-items: center;
+}
+
+.farm-bottom-info {
+    display: none;
 }
 
 .farm-left-info-1, .farm-left-info-2, .farm-left-info-3, .farm-left-info-4 {
@@ -292,7 +375,7 @@ p {
 
 
 .crypto-balance .right-balance {
-    margin-left: 34px;
+    margin-left: 28px;
 }
 
 
@@ -345,6 +428,10 @@ p {
     display: flex;
     margin-left: 0;
     justify-content: space-between;
+}
+
+.farm-menu-crypto {
+    display: none;
 }
 
 .binance-buy-btn a:nth-child(1) {
@@ -808,27 +895,154 @@ p {
     opacity: 0.3;
 }
 
+.table-list {
+    display: none;
+    padding-left: 20px;
+}
+
+.item-1-name {
+    margin-top: 20px;
+}
+
+.item-1-name span,
+.item-1-date span,
+.item-1-time span, 
+.item-1-sum span {
+    color: #828282;
+    font-size: 14px;
+    line-height: 15px;
+    font-weight: 400;
+}
+
+.table-list .green-p {
+    color: #219653;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 15px;
+}
+
+.table-list .red-p {
+    color: #F2994A;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 15px;
+}
+
+.table-list .red-p strong {
+    color: #255390;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 17px;
+}
+
+.table-list .green-p strong {
+    color: #255390;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 17px;
+    margin-right: 10px;
+}
+.item-1-last-div {
+    display: flex;
+    align-items: center;
+}
+
+.item-1-last-div svg {
+    margin-right: 5px;
+}
+
+.item-1-last-div strong {
+    margin-right: 5px;
+}
+
+
 @media screen and (max-width: 1316px) {
     .balance .balance-and-buy:nth-child(4) {
         margin-right: 25px;
     }
+    .balance-and-buy {
+        width: 30%;
+    }
+    .balance {
+        justify-content: space-between;
+    }
+    .balance .balance-and-buy:nth-child(3),
+    .balance .balance-and-buy:nth-child(6) {
+        margin-right: 0;
+    }
     .header-container {
-        padding-left: 40px;
+        padding-right: 49px;
+        padding-left: 20px;
     }
 }
 
 @media screen and (max-width: 1290px) {
-    .container {
-        padding-left: 12%;
+    .farm-left-info {
+        display: none;
     }
-    .account-info {
-        margin-left: 45%;
+    .farm-left-info-min {
+        display: block;
+    }
+    .farm-bottom-info {
+        display: flex;
+        max-width: 554px;
+        height: 65px;
+        flex-wrap: wrap;
+    }
+    .container {
+        padding-left: 5%;
+    }
+    .top-nav {
+        display: block;
+        padding-left: 5%;
+    }
+    .left-header-btns {
+        display: none;
+    }
+    .menu-button-container {
+      display: flex;
+    }
+    .menu {
+      position: absolute;
+      top: 0;
+      margin-top: 90px;
+      left: 0;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    #menu-toggle ~ .menu li {
+      height: 0;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    #menu-toggle:checked ~ .menu li {
+      border: 1px solid #333;
+      height: 2.5em;
+      padding: 0.5em;
+      transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .menu > li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0.5em 0;
+      width: 100%;
+      color: white;
+      background-color: #222;
+    }
+    .menu > li:not(:last-child) {
+      border-bottom: 1px solid #444;
     }
     .help-btn {
         margin-right: 0;
     }
     .left-header-btns {
-        width: 100%;
+        display: none;
     }
     .big-chart-top {
         width: 100%;
@@ -859,7 +1073,10 @@ p {
 
 @media screen and (max-width: 1047px) {
     .balance-and-buy {
-        width: 350px;
+        width: 45%;
+    }
+    .balance .balance-and-buy:nth-child(6) {
+        margin-right: 25px;
     }
 }
 
@@ -868,10 +1085,7 @@ p {
         font-size: 23px;
     }
     .account-info-text {
-        font-size: 24px;
-    }
-    .account-info-img img {
-        width: 50px;
+        font-size: 20px;
     }
     .drpdwn {
         width: 15px;
@@ -883,8 +1097,8 @@ p {
         font-size: 17px;
     }
     .balance-and-buy {
-        width: 480px;
-        margin-left: 18%;
+        width: 80%;
+        margin-left: 6%;
     }
     .balance-block {
         height: 120px;
@@ -1038,7 +1252,7 @@ p {
         margin-right: 15px;
     }
     .balance-and-buy {
-        margin-left: 13%;
+        margin-left: 8%;
     }
     .transaction {
         max-width: 100%;
@@ -1046,9 +1260,15 @@ p {
     .transaction-info {
         padding-left: 5px;
     }
+    .all-balance-block {
+        margin-right: 20px;
+    }
 }
 
-@media screen and (max-width: 600px) {
+
+
+
+@media screen and (max-width: 604px) {
     .left-header-btns {
         width: 100%;
         padding-left: 0;
@@ -1062,15 +1282,181 @@ p {
     .tr-2 strong, .tr-3 strong, .tr-4 strong {
         margin-right: 9px;
     }
+    .max-text-farm {
+        font-size: 16px;
+    }
+    .min-text-farm {
+        font-size: 17px;
+    }
+    .all-balance-block {
+        margin-right: 10px;
+    }
 }
 
 @media screen and (max-width: 547px) {
     .header-btn {
-        font-size: 19px;
         width: 190px;
         height: 40px;
     }
     .account-info {
         margin-left: 30%;
+    }
+    .all-balance-block p {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 507px) {
+
+    .sum-balance p:nth-child(1) {
+        font-size: 15px;
+    }
+    .sum-balance-elipse span {
+        font-size: 14px;
+    }
+    .sum-balance-elipse strong {
+        font-size: 20px;
+    }
+    .sum-balance p:nth-child(3) {
+        font-size: 15px;
+    }
+    .crypto-balance {
+        font-size: 15px;
+    }
+    .btn-block p {
+        font-size: 15px;
+    }
+    .all-balance-block p {
+        font-size: 14px;
+    }
+    .total-balance span {
+        font-size: 13px;
+    }
+    .total-balance strong {
+        font-size: 16px;
+    }
+    .left-big-chart > p {
+        font-size: 18px;
+    }
+    .right-big-chart p {
+        font-size: 18px;
+    }
+    .chart-right-block-text span {
+        font-size: 15px;
+    }
+    .first-p {
+        font-size: 18px;
+    }
+    .transactions-buttons button {
+        font-size: 13px;
+    }
+    .tr-2 .green-p {
+        font-size: 12px;
+    }
+    .tr-2 strong, .tr-3 strong, .tr-4 strong {
+        font-size: 12px;
+    }
+    .tr-3 .red-p, .tr-4 .red-p {
+        font-size: 12px;
+    }
+    .tr-2 p, .tr-3 p, .tr-4 p {
+        font-size: 11px;
+    }
+    .tr-2 strong, .tr-3 strong, .tr-4 strong {
+        font-size: 10px;
+    }
+    .last-td-div span {
+        font-size: 11px;
+    }
+    .tr-1 span {
+        font-size: 9px;
+    }
+    .date-table {
+        padding-right: 32px;
+    }
+    .first-p-contact {
+        font-size: 18px;
+    }
+    .left-contact-info p:nth-child(1) {
+        font-size: 15px;
+    }
+    .left-contact-info p:nth-child(2) {
+        font-size: 15px;
+    }
+    .right-contact-info p:nth-child(1) {
+        font-size: 15px;
+    }
+    .right-contact-info p:nth-child(2) {
+        font-size: 15px;
+    }
+    .show-more {
+        font-size: 15px;
+    }
+    .footer {
+        font-size: 15px;
+    }
+    .farm-left-info-1 p {
+        font-size: 20px;
+    }
+    .header-btn {
+        font-size: 15px;
+    }
+    .account-info-text {
+        font-size: 15px;
+    }
+    .crypto-balance p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 478px) {
+    .farm-menu-crypto {
+        display: block;
+        margin-left: 5px;
+    }
+    .farm-left-info-min .farm-left-info-1 {
+        display: flex;
+        align-items: center;
+    }
+    .farm-bottom-info {
+        display: none;
+    }
+    .balance-and-buy {
+        margin-left: 0;
+        width: 100%;
+    }
+    .balance .balance-and-buy:nth-child(1), 
+    .balance .balance-and-buy:nth-child(2), 
+    .balance .balance-and-buy:nth-child(3),
+    .balance .balance-and-buy:nth-child(4), 
+    .balance .balance-and-buy:nth-child(5), 
+    .balance .balance-and-buy:nth-child(6) {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 439px) {
+    .header-btn {
+        width: 133px;
+        font-size: 11px;
+        height: 33px;
+    }
+    .header-btn img {
+        margin-right: 4px;
+    }
+    .crypto-balance p {
+        font-size: 12px;
+    }
+    .all-balance-block p {
+        font-size: 11px;
+    }
+    .all-balance-block {
+        margin-right: 10px;
+    }
+    .table-list {
+        display: block;
+    }
+    .transaction-table {
+        display: none;
     }
 }
